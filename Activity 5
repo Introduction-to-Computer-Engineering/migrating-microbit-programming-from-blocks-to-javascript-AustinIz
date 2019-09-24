@@ -1,0 +1,9 @@
+let sprite: game.LedSprite = null
+input.onButtonPressed(Button.A, () => {
+   for (let i = 0; i < 4; i++) {
+       sprite.move(4)
+       sprite.turn(Direction.Right, 90)
+       basic.pause(100)
+   }
+})
+sprite = game.createSprite(0, 0)
