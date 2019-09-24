@@ -1,0 +1,20 @@
+input.onGesture(Gesture.Shake, function () {
+    basic.clearScreen()
+})
+input.onButtonPressed(Button.A, function () {
+    Time = Time + 1
+    basic.showNumber(Time)
+})
+input.onButtonPressed(Button.B, function () {
+    Time = Time - 1
+    basic.showNumber(Time)
+})
+input.onButtonPressed(Button.AB, function () {
+    for (let i = 0; i < Time; i++) {
+        basic.showNumber(Time)
+        basic.pause(1000)
+        Time += -1
+    }
+})
+let Time = 0
+basic.showString("TIMER IN SECONDS")
